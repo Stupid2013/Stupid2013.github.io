@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://Stupid2013.github.io">
+  <title>RequireJS学习笔记 | 死兔比的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x540D;&amp;#x540D;&amp;#x526F;&amp;#x5176;&amp;#x5B9E;&amp;#x7684;&amp;#x524D;&amp;#x7AEF;&amp;#x5C0F;&amp;#x83DC;&amp;#x9E1F;&amp;#xFF0C;&amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;HTML&amp;#x91CC;&amp;#x9">
+<meta property="og:type" content="article">
+<meta property="og:title" content="RequireJS学习笔记">
+<meta property="og:url" content="https://Stupid2013.github.io/2016/12/22/RequireJS学习笔记/index.html">
+<meta property="og:site_name" content="死兔比的秘密基地">
+<meta property="og:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x540D;&amp;#x540D;&amp;#x526F;&amp;#x5176;&amp;#x5B9E;&amp;#x7684;&amp;#x524D;&amp;#x7AEF;&amp;#x5C0F;&amp;#x83DC;&amp;#x9E1F;&amp;#xFF0C;&amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;HTML&amp;#x91CC;&amp;#x9">
+<meta property="og:updated_time" content="2016-12-22T15:27:00.889Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="RequireJS学习笔记">
+<meta name="twitter:description" content="&amp;#x4F5C;&amp;#x4E3A;&amp;#x4E00;&amp;#x540D;&amp;#x540D;&amp;#x526F;&amp;#x5176;&amp;#x5B9E;&amp;#x7684;&amp;#x524D;&amp;#x7AEF;&amp;#x5C0F;&amp;#x83DC;&amp;#x9E1F;&amp;#xFF0C;&amp;#x5728;&amp;#x9879;&amp;#x76EE;&amp;#x5F00;&amp;#x53D1;&amp;#x8FC7;&amp;#x7A0B;&amp;#x4E2D;HTML&amp;#x91CC;&amp;#x9">
+  
+    <link rel="alternative" href="/atom.xml" title="死兔比的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/avatar/avatar.png">
+  
+  <link rel="stylesheet" href="../../../../main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/avatar/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">死兔比</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">psychotic</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="../../../../index.html">主页</a></li>
+	        
+				<li><a href="../../../../tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">About me</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/Stupid2013" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">死兔比</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/avatar/avatar.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">死兔比</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">psychotic</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="../../../../index.html">主页</a></li>
+		        
+					<li><a href="../../../../tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Stupid2013" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-RequireJS学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      RequireJS学习笔记
+    </h1>
+  
+
+        <a href="" class="archive-article-date">
+  	<time datetime="2016-12-22T15:18:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>&#x4F5C;&#x4E3A;&#x4E00;&#x540D;&#x540D;&#x526F;&#x5176;&#x5B9E;&#x7684;&#x524D;&#x7AEF;&#x5C0F;&#x83DC;&#x9E1F;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;HTML&#x91CC;&#x9762;&#x7ECF;&#x5E38;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x4E11;&#x964B;&#x7684;&#x573A;&#x666F;&#xFF1A;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;a.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;b.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;c.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;d.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;e.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;f.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;g.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;h.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;i.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&#x8FD9;&#x770B;&#x8D77;&#x6765;&#x7B80;&#x76F4;&#x592A;low&#x4E86;&#x597D;&#x561B;(#&#x2035;&#x2032;)&#x51F8; <a id="more"></a><br>&#x7136;&#x540E;&#x542C;&#x8BF4;requireRequireJS&#x662F;&#x4E00;&#x4E2A;&#x975E;&#x5E38;&#x5C0F;&#x5DE7;&#x7684;JavaScript&#x6A21;&#x5757;&#x8F7D;&#x5165;&#x6846;&#x67B6;&#xFF0C;&#x662F;AMD&#x89C4;&#x8303;&#x6700;&#x597D;&#x7684;&#x5B9E;&#x73B0;&#x8005;&#x4E4B;&#x4E00;&#x3002;&#x5B83;&#x53EF;&#x4EE5;&#xFF1A;</p>
+<blockquote>
+<p>1.&#x9632;&#x6B62;js&#x52A0;&#x8F7D;&#x963B;&#x585E;&#x9875;&#x9762;&#x6E32;&#x67D3;<br>2.&#x7BA1;&#x7406;&#x6A21;&#x5757;&#x4E4B;&#x95F4;&#x7684;&#x4F9D;&#x8D56;&#x6027;&#xFF0C;&#x4FBF;&#x4E8E;&#x4EE3;&#x7801;&#x7684;&#x7F16;&#x5199;&#x548C;&#x7EF4;&#x62A4;<br>3.&#x907F;&#x514D;&#x4EE5;&#x4E0A;&#x60C5;&#x51B5;&#x7684;&#x51FA;&#x73B0;</p>
+</blockquote>
+<p>&#x6545;&#x5B66;&#x4E60;&#x4E4B;&#x3002;</p>
+<hr>
+<p><strong>Javascript&#x6A21;&#x5757;&#x89C4;&#x8303;&#x4E4B;AMD</strong></p>
+<p>&#x5907;&#x6CE8;&#xFF1A;&#x6458;&#x81EA;&#x962E;&#x4E00;&#x5CF0;&#x5927;&#x795E;&#x7684;<a href="http://www.ruanyifeng.com/blog/2012/10/asynchronous_module_definition.html" target="_blank" rel="external">Javascript&#x6A21;&#x5757;&#x5316;&#x7F16;&#x7A0B;&#xFF08;&#x4E8C;&#xFF09;&#xFF1A;AMD&#x89C4;&#x8303;</a></p>
+<p>AMD&#x662F;&#x201D;Asynchronous Module Definition&#x201D;&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x610F;&#x601D;&#x5C31;&#x662F;&#x201D;&#x5F02;&#x6B65;&#x6A21;&#x5757;&#x5B9A;&#x4E49;&#x201D;&#x3002;&#x5B83;&#x91C7;&#x7528;&#x5F02;&#x6B65;&#x65B9;&#x5F0F;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF0C;&#x6A21;&#x5757;&#x7684;&#x52A0;&#x8F7D;&#x4E0D;&#x5F71;&#x54CD;&#x5B83;&#x540E;&#x9762;&#x8BED;&#x53E5;&#x7684;&#x8FD0;&#x884C;&#x3002;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x7684;&#x8BED;&#x53E5;&#xFF0C;&#x90FD;&#x5B9A;&#x4E49;&#x5728;&#x4E00;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x4E2D;&#xFF0C;&#x7B49;&#x5230;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x4E4B;&#x540E;&#xFF0C;&#x8FD9;&#x4E2A;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x624D;&#x4F1A;&#x8FD0;&#x884C;&#x3002;</p>
+<p>AMD&#x4E5F;&#x91C7;&#x7528;require()&#x8BED;&#x53E5;&#x52A0;&#x8F7D;&#x6A21;&#x5757;&#xFF0C;&#x4F46;&#x662F;&#x4E0D;&#x540C;&#x4E8E;CommonJS&#xFF0C;&#x5B83;&#x8981;&#x6C42;&#x4E24;&#x4E2A;&#x53C2;&#x6570;&#xFF1A;</p>
+<blockquote>
+<p>require([module], callback);</p>
+</blockquote>
+<p>&#x7B2C;&#x4E00;&#x4E2A;&#x53C2;&#x6570;[module]&#xFF0C;&#x662F;&#x4E00;&#x4E2A;&#x6570;&#x7EC4;&#xFF0C;&#x91CC;&#x9762;&#x7684;&#x6210;&#x5458;&#x5C31;&#x662F;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;&#xFF1B;&#x7B2C;&#x4E8C;&#x4E2A;&#x53C2;&#x6570;callback&#xFF0C;&#x5219;&#x662F;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#x4E4B;&#x540E;&#x7684;&#x56DE;&#x8C03;&#x51FD;&#x6570;&#x3002;&#x5982;&#x679C;&#x5C06;&#x524D;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6539;&#x5199;&#x6210;AMD&#x5F62;&#x5F0F;&#xFF0C;&#x5C31;&#x662F;&#x4E0B;&#x9762;&#x8FD9;&#x6837;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>([<span class="string">&apos;math&apos;</span>], <span class="function"><span class="keyword">function</span> (<span class="params">math</span>) </span>{</div><div class="line"></div><div class="line">&#x3000;&#x3000;math.add(<span class="number">2</span>, <span class="number">3</span>);</div><div class="line">&#x3000;&#x3000;</div><div class="line">});</div></pre></td></tr></table></figure></p>
+<p>math.add()&#x4E0E;math&#x6A21;&#x5757;&#x52A0;&#x8F7D;&#x4E0D;&#x662F;&#x540C;&#x6B65;&#x7684;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x4E0D;&#x4F1A;&#x53D1;&#x751F;&#x5047;&#x6B7B;&#x3002;&#x6240;&#x4EE5;&#x5F88;&#x663E;&#x7136;&#xFF0C;AMD&#x6BD4;&#x8F83;&#x9002;&#x5408;&#x6D4F;&#x89C8;&#x5668;&#x73AF;&#x5883;&#x3002;</p>
+<hr>
+<p><strong>RequireJS&#x7684;&#x57FA;&#x672C;&#x7528;&#x6CD5;</strong></p>
+<p>&#x5728;&#x4F7F;&#x7528;&#x4E4B;&#x524D;&#x5F53;&#x7136;&#x662F;&#x8981;&#x4E0B;&#x8F7D;&#x4E86;&#xFF0C;&#x4E0B;&#x8F7D;&#x8BF7;&#x6233;-&gt;<a href="http://requirejs.org/docs/download.html" target="_blank" rel="external">RequireJS&#x5B98;&#x7F51;-&#x4E0B;&#x8F7D;</a></p>
+<p>&#x9996;&#x5148;&#x9700;&#x8981;&#x65B0;&#x5EFA;&#x4E00;&#x4E2A;RequireJS&#x7684;&#x5165;&#x53E3;&#x51FD;&#x6570;main.js&#xFF0C;&#x5728;main.js&#x4E2D;&#x5199;&#x5165;&#x4F60;&#x8981;&#x52A0;&#x8F7D;&#x7684;&#x6A21;&#x5757;&#x548C;&#x914D;&#x7F6E;&#xFF0C;for example&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>.config({</div><div class="line">    <span class="attr">baseUrl</span> : <span class="string">&quot;assets/js&quot;</span>, <span class="comment">//&#x52A0;&#x8F7D;&#x7684;&#x6240;&#x6709;&#x4F9D;&#x8D56;&#x6A21;&#x5757;js&#x7684;&#x57FA;&#x5730;&#x5740;&#xFF08;&#x6839;&#x8DEF;&#x5F84;&#xFF09;&#xFF0C;&#x4F60;&#x52A0;&#x8F7D;&#x7684;&#x6240;&#x6709;js&#x90FD;&#x8981;&#x5728;&#x8FD9;&#x4E2A;&#x8DEF;&#x5F84;&#x4E0B;&#xFF0C;&#x5982;&#x679C;&#x4E0D;&#x914D;&#x7F6E;&#xFF0C;&#x5F53;script&#x6807;&#x7B7E;&#x6307;&#x5B9A;data-main&#x5C5E;&#x6027;&#x65F6;&#xFF0C;require&#x4F1A;&#x9ED8;&#x8BA4;&#x7684;&#x5C06;data-main&#x6307;&#x5B9A;&#x7684;js&#x8DEF;&#x5F84;&#x4E3A;&#x6839;&#x8DEF;&#x5F84;</span></div><div class="line">    paths : {  <span class="comment">//&#x914D;&#x7F6E;&#x4F9D;&#x8D56;&#x6A21;&#x5757;&#x8DEF;&#x5F84;</span></div><div class="line">        <span class="string">&quot;jquery&quot;</span> : <span class="string">&quot;jquery-2.2.4&quot;</span>,  <span class="comment">//&#x7701;&#x7565;.js&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x5FC5;&#x987B;</span></div><div class="line">        <span class="string">&quot;jquery-weui&quot;</span> : <span class="string">&quot;jquery-weui&quot;</span>,</div><div class="line">        <span class="string">&quot;swiper.jquery&quot;</span> : <span class="string">&quot;swiper.jquery&quot;</span></div><div class="line">    },</div><div class="line">    <span class="attr">shim</span>:{ <span class="comment">//&#x914D;&#x7F6E;&#x4E0D;&#x517C;&#x5BB9;&#x7684;&#x6A21;&#x5757;</span></div><div class="line">        <span class="string">&quot;jquery-weui&quot;</span> : {</div><div class="line">            <span class="attr">deps</span>: [<span class="string">&apos;jquery&apos;</span>]</div><div class="line">        },</div><div class="line">        <span class="string">&quot;swiper.jquery&quot;</span> : {</div><div class="line">            <span class="attr">deps</span>: [<span class="string">&apos;jquery&apos;</span>]</div><div class="line">        },</div><div class="line">        <span class="string">&apos;jquery.scroll&apos;</span>: {</div><div class="line">&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;<span class="attr">deps</span>: [<span class="string">&apos;jquery&apos;</span>],  <span class="comment">//&#x8868;&#x660E;&#x8BE5;&#x6A21;&#x5757;&#x7684;&#x4F9D;&#x8D56;&#x6027;</span></div><div class="line">&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;&#x3000;exports: <span class="string">&apos;jQuery.fn.scroll&apos;</span> <span class="comment">//exports&#x503C;&#xFF08;&#x8F93;&#x51FA;&#x7684;&#x53D8;&#x91CF;&#x540D;&#xFF09;&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E2A;&#x6A21;&#x5757;&#x5916;&#x90E8;&#x8C03;&#x7528;&#x65F6;&#x7684;&#x540D;&#x79F0;</span></div><div class="line">&#x3000;&#x3000;&#x3000;&#x3000;}</div><div class="line">    }</div><div class="line">});</div></pre></td></tr></table></figure></p>
+<p>main.js&#x4E3B;&#x8981;&#x7528;&#x4E8E;&#x914D;&#x7F6E;&#x6A21;&#x5757;&#x8DEF;&#x5F84;&#x53CA;&#x5176;&#x4F9D;&#x8D56;&#xFF0C;&#x6700;&#x597D;&#x4FDD;&#x8BC1;&#x5B83;&#x7684;&#x5E72;&#x51C0;&#xFF0C;&#x6574;&#x6D01;&#x3002;&#x56E0;&#x4E3A;&#x5728;&#x6240;&#x6709;&#x7684;&#x9875;&#x9762;&#x90FD;&#x4F1A;&#x52A0;&#x8F7D;&#x8FD9;&#x4E2A;js,&#x4E0D;&#x8FC7;&#x5982;&#x679C;&#x6709;&#x90A3;&#x79CD;&#x6BCF;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x901A;&#x7528;&#x7684;&#x4EE3;&#x7801;&#x8FD8;&#x662F;&#x53EF;&#x4EE5;&#x5199;&#x5728;&#x8FD9;&#x4E2A;&#x9875;&#x9762;&#x91CC;&#xFF08;&#x6BD4;&#x5982;&#x5728;&#x6BCF;&#x4E2A;&#x9875;&#x9762;&#x90FD;&#x8981;&#x9A8C;&#x8BC1;&#x7528;&#x6237;&#x662F;&#x5426;&#x662F;&#x767B;&#x5F55;&#x72B6;&#x6001;&#x7B49;&#xFF09;&#x3002;<br>&#x7136;&#x540E;&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x8FD9;&#x91CC;&#x6709;&#x4E24;&#x79CD;&#x4F7F;&#x7528;&#x65B9;&#x5F0F;&#xFF0C;<br>&#x7B2C;&#x4E00;&#x79CD;&#xFF1A;<br>&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5F15;&#x5165;&#xFF1A;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;assets/js/require.js&quot;</span> <span class="attr">data-main</span>=<span class="string">&quot;assets/js/main&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;assets/js/index.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line">/*&#x6CE8;&#x610F;&#xFF1A;data-main&#x5C5E;&#x6027;&#x91CC;&#x7684;&#x8DEF;&#x5F84;&#x8981;&#x7701;&#x7565;.js&#x540E;&#x7F00;&#x540D;&#xFF0C;&#x56E0;&#x4E3A;requireJS&#x4F1A;&#x9ED8;&#x8BA4;&#x6DFB;&#x52A0;&#x540E;&#x7F00;&#x540D;*/</div></pre></td></tr></table></figure></p>
+<p>&#x7136;&#x540E;&#x5728;index.js&#x91CC;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>([<span class="string">&apos;jquery&apos;</span>,<span class="string">&apos;jquery-weui&apos;</span>,<span class="string">&apos;swiper.jquery&apos;</span>],<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>{</div><div class="line">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{  <span class="comment">//&#x8FD9;&#x91CC;&#x5F00;&#x59CB;&#x5199;&#x672C;&#x9875;&#x9762;&#x7684;&#x903B;&#x8F91;</span></div><div class="line">            <span class="keyword">var</span> indexPage = {</div><div class="line">                <span class="attr">serverUrl</span>: <span class="string">&quot;&quot;</span>,</div><div class="line">                <span class="attr">init</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">                   <span class="comment">//&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;</span></div><div class="line">                }</div><div class="line">            };</div><div class="line">            indexPage.init();</div><div class="line">        });</div><div class="line">    });</div></pre></td></tr></table></figure></p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#xFF1A;<br>&#x5728;&#x9875;&#x9762;&#x4E2D;&#x5F15;&#x5165;&#xFF1A;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">src</span>=<span class="string">&quot;assets/js/require.js&quot;</span> <span class="attr">data-main</span>=<span class="string">&quot;assets/js/index&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>&#x7136;&#x540E;&#x5728;index.js&#x91CC;&#x9700;&#x8981;&#x5F15;&#x5165;main.js(&#x6CE8;&#x610F;&#xFF1A;&#x8FD9;&#x91CC;&#x7684;&#x540E;&#x7F00;&#x540D;&#x4E0D;&#x80FD;&#x7701;&#x7565;)&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">require</span>([<span class="string">&apos;assets/js/main.js&apos;</span>],<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{ <span class="comment">//&#x9996;&#x5148;&#x5F15;&#x5165;main.js,&#x6CE8;&#x610F;&#x8DEF;&#x5F84;&#x4E00;&#x5B9A;&#x4E0D;&#x8981;&#x9519;</span></div><div class="line">    <span class="built_in">require</span>([<span class="string">&apos;jquery&apos;</span>,<span class="string">&apos;jquery-weui&apos;</span>,<span class="string">&apos;swiper.jquery&apos;</span>],<span class="function"><span class="keyword">function</span> (<span class="params">$</span>) </span>{ <span class="comment">//&#x518D;&#x5F15;&#x5165;&#x5176;&#x4ED6;&#x9700;&#x8981;&#x7684;js</span></div><div class="line">        $(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">            <span class="keyword">var</span> indexPage = {</div><div class="line">                <span class="attr">serverUrl</span>: <span class="string">&quot;&quot;</span>,</div><div class="line">                <span class="attr">init</span>:<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">                    <span class="comment">//&#x9875;&#x9762;&#x521D;&#x59CB;&#x5316;</span></div><div class="line">                }</div><div class="line">            };</div><div class="line">            indexPage.init();</div><div class="line">        });</div><div class="line">    });</div><div class="line">});</div></pre></td></tr></table></figure></p>
+<p>&#x6069;&#xFF0C;&#x5F53;&#x7136;&#xFF0C;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x66F4;&#x597D;&#x3002;&#x56E0;&#x4E3A;require.js&#x662F;&#x5F02;&#x6B65;&#x52A0;&#x8F7D;&#xFF0C;&#x7B2C;&#x4E00;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5982;&#x679C;&#x91CC;&#x9762;&#x6709;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x51FD;&#x6570;&#xFF0C;&#x800C;&#x5728;&#x7ACB;&#x5373;&#x6267;&#x884C;&#x51FD;&#x6570;&#x6267;&#x884C;&#x4E4B;&#x524D;&#xFF0C;&#x5B83;&#x7684;&#x4F9D;&#x8D56;&#x51FD;&#x6570;&#x8FD8;&#x6CA1;&#x6709;&#x52A0;&#x8F7D;&#x6210;&#x529F;&#x7684;&#x8BDD;&#xFF0C;&#x81EA;&#x7136;&#x4F1A;&#x62A5;&#x9519;&#x7684;&#x5566;&#x3002;&#x800C;&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#xFF0C;&#x5148;&#x52A0;&#x8F7D;main.js&#xFF0C;&#x5C31;&#x4F1A;&#x5148;&#x628A;&#x4F9D;&#x8D56;&#x51FD;&#x6570;&#x52A0;&#x8F7D;&#x5B8C;&#x6210;&#x624D;&#x4F1A;&#x6267;&#x884C;&#x56DE;&#x8C03;&#x91CC;&#x7684;&#x51FD;&#x6570;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>&#x6682;&#x65F6;&#x6027;over&#x3002;</p>
+<p>&#x611F;&#x8C22;&#x5C0F;&#x660E;&#x7AE5;&#x978B;<a href="https://github.com/xiangming25" target="_blank" rel="external">&#x5C0F;&#x660E;&#x7AE5;&#x978B;&#x7684;Github</a>&#x7684;&#x53CB;&#x60C5;&#x89E3;&#x60D1;:-D&#x3002;</p>
+<p>&#x53C2;&#x8003;&#x8D44;&#x6599;0&#x94FE;&#x63A5;&#xFF1A;<br>1.<a href="http://www.requirejs.cn/" target="_blank" rel="external">RequireJS&#x4E2D;&#x6587;&#x7F51;</a><br>2.<a href="http://www.runoob.com/w3cnote/requirejs-tutorial-1.html" target="_blank" rel="external">JS&#x6A21;&#x5757;&#x5316;&#x5DE5;&#x5177;requirejs&#x6559;&#x7A0B;(&#x4E00;)&#xFF1A;&#x521D;&#x8BC6;requirejs</a><br>3.<a href="http://www.ruanyifeng.com/blog/2012/11/require_js.html" target="_blank" rel="external">Javascript&#x6A21;&#x5757;&#x5316;&#x7F16;&#x7A0B;&#xFF08;&#x4E09;&#xFF09;&#xFF1A;require.js&#x7684;&#x7528;&#x6CD5;</a><br>4.<a href="http://www.ibm.com/developerworks/cn/web/1209_shiwei_requirejs/#icomments" target="_blank" rel="external">&#x4F7F;&#x7528; RequireJS &#x4F18;&#x5316; Web &#x5E94;&#x7528;&#x524D;&#x7AEF;</a></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/模块化编程/">模块化编程</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="../../20/JavaScript权威指南（第6版）学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">JavaScript权威指南（第6版）学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 死兔比
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="../../../.././main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="../../../../tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="../../../../tags/css/" style="font-size: 10px;">css</a> <a href="../../../../tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="../../../../tags/js/" style="font-size: 10px;">js</a> <a href="../../../../tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="../../../../tags/模块化编程/" style="font-size: 10px;">模块化编程</a> <a href="../../../../tags/移动端开发/" style="font-size: 10px;">移动端开发</a> <a href="../../../../tags/随笔/" style="font-size: 20px;">随笔</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">机智哲理强迫症girl&lt;br&gt;&lt;br&gt;百毒不侵&lt;br&gt;&lt;br&gt;爱旅行爱发呆  还有神经o(*￣▽￣*)ブ</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
