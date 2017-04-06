@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="renderer" content="webkit">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
+  <link rel="dns-prefetch" href="https://Stupid2013.github.io">
+  <title>ES6学习笔记 | 死兔比的秘密基地</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="1&amp;#x3001;let&amp;#x548C;const&amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x7684;&amp;#x7528;&amp;#x9014;&amp;#x4E0E;var&amp;#x7C7B;&amp;#x4F3C;&amp;#xFF0C;&amp;#x90FD;&amp;#x662F;&amp;#x7528;&amp;#x6765;&amp;#x58F0;&amp;#x660E;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#xFF0C;&amp;#x4F46;&amp;#x5">
+<meta property="og:type" content="article">
+<meta property="og:title" content="ES6学习笔记">
+<meta property="og:url" content="https://Stupid2013.github.io/2017/04/06/ES6学习笔记/index.html">
+<meta property="og:site_name" content="死兔比的秘密基地">
+<meta property="og:description" content="1&amp;#x3001;let&amp;#x548C;const&amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x7684;&amp;#x7528;&amp;#x9014;&amp;#x4E0E;var&amp;#x7C7B;&amp;#x4F3C;&amp;#xFF0C;&amp;#x90FD;&amp;#x662F;&amp;#x7528;&amp;#x6765;&amp;#x58F0;&amp;#x660E;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#xFF0C;&amp;#x4F46;&amp;#x5">
+<meta property="og:updated_time" content="2017-04-06T02:52:36.786Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="ES6学习笔记">
+<meta name="twitter:description" content="1&amp;#x3001;let&amp;#x548C;const&amp;#x8FD9;&amp;#x4E24;&amp;#x4E2A;&amp;#x7684;&amp;#x7528;&amp;#x9014;&amp;#x4E0E;var&amp;#x7C7B;&amp;#x4F3C;&amp;#xFF0C;&amp;#x90FD;&amp;#x662F;&amp;#x7528;&amp;#x6765;&amp;#x58F0;&amp;#x660E;&amp;#x53D8;&amp;#x91CF;&amp;#x7684;&amp;#xFF0C;&amp;#x4F46;&amp;#x5">
+  
+    <link rel="alternative" href="/atom.xml" title="死兔比的秘密基地" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/avatar/avatar.png">
+  
+  <link rel="stylesheet" href="../../../../main.css">
+  
+
+</head>
+
+<body>
+  <div id="container">
+    <div class="left-col">
+      <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img src="/avatar/avatar.png" class="js-avatar">
+			
+		</a>
+
+		<hgroup>
+		  <h1 class="header-author"><a href="/">死兔比</a></h1>
+		</hgroup>
+
+		
+		<p class="header-subtitle">psychotic</p>
+		
+
+		<nav class="header-menu">
+			<ul>
+			
+				<li><a href="../../../../index.html">主页</a></li>
+	        
+				<li><a href="../../../../tags/随笔">随笔</a></li>
+	        
+			</ul>
+		</nav>
+		<nav class="header-smart-menu">
+	        
+    		
+    			
+    			<a class="js-smart-menu" data-idx="0" href="javascript:void(0)">所有文章</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="1" href="javascript:void(0)">标签</a>
+    			
+    			
+            
+    			
+    			<a class="js-smart-menu" data-idx="2" href="javascript:void(0)">About me</a>
+    			
+    			
+            
+		</nav>
+		<nav class="header-nav">
+			<div class="social">
+				
+					<a class="github" target="_blank" href="https://github.com/Stupid2013" title="github"><i class="icon-github"></i></a>
+		        
+					<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+		        
+			</div>
+		</nav>
+	</header>		
+</div>
+
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"><i class="icon-sort"></i></div>
+  		<h1 class="header-author js-mobile-header hide">死兔比</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				
+					<img src="/avatar/avatar.png" class="js-avatar">
+				
+			</div>
+			<hgroup>
+			  <h1 class="header-author">死兔比</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">psychotic</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="../../../../index.html">主页</a></li>
+		        
+					<li><a href="../../../../tags/随笔">随笔</a></li>
+		        
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/Stupid2013" title="github"><i class="icon-github"></i></a>
+			        
+						<a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
+</nav>
+
+      <div class="body-wrap">
+        <article id="post-ES6学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      ES6学习笔记
+    </h1>
+  
+
+        <a href="" class="archive-article-date">
+  	<time datetime="2017-04-06T02:49:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
+</a>
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1&#x3001;let&#x548C;const<br>&#x8FD9;&#x4E24;&#x4E2A;&#x7684;&#x7528;&#x9014;&#x4E0E;<code>var</code>&#x7C7B;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#xFF0C;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x8FD0;&#x7528;&#x4E2D;&#x4ED6;&#x4FE9;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x7279;&#x6B8A;&#x7528;&#x9014;&#x3002;<br>&#x9996;&#x5148;&#x6765;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">&apos;zach&apos;</span></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) {</div><div class="line">    <span class="keyword">var</span> name = <span class="string">&apos;obama&apos;</span></div><div class="line">    <span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div><div class="line">    <span class="keyword">break</span></div><div class="line">}</div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<p>&#x4F7F;&#x7528;var&#x4E24;&#x6B21;&#x8F93;&#x51FA;&#x90FD;&#x662F;obama&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;ES5&#x53EA;&#x6709;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x548C;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x6CA1;&#x6709;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x8FD9;&#x5E26;&#x6765;&#x5F88;&#x591A;&#x4E0D;&#x5408;&#x7406;&#x7684;&#x573A;&#x666F;&#x3002;&#x7B2C;&#x4E00;&#x79CD;&#x573A;&#x666F;&#x5C31;&#x662F;&#x4F60;&#x73B0;&#x5728;&#x770B;&#x5230;&#x7684;&#x5185;&#x5C42;&#x53D8;&#x91CF;&#x8986;&#x76D6;&#x5916;&#x5C42;&#x53D8;&#x91CF;&#x3002;&#x800C;let&#x5219;&#x5B9E;&#x9645;&#x4E0A;&#x4E3A;JavaScript&#x65B0;&#x589E;&#x4E86;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x3002;&#x7528;&#x5B83;&#x6240;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x53EA;&#x5728;let&#x547D;&#x4EE4;&#x6240;&#x5728;&#x7684;&#x4EE3;&#x7801;&#x5757;&#x5185;&#x6709;&#x6548;&#x3002;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> name = <span class="string">&apos;zach&apos;</span></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) {</div><div class="line">    <span class="keyword">let</span> name = <span class="string">&apos;obama&apos;</span></div><div class="line">    <span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div><div class="line">    <span class="keyword">break</span></div><div class="line">}</div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">//zach</span></div></pre></td></tr></table></figure>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;var&#x5E26;&#x6765;&#x7684;&#x4E0D;&#x5408;&#x7406;&#x573A;&#x666F;&#x5C31;&#x662F;&#x7528;&#x6765;&#x8BA1;&#x6570;&#x7684;&#x5FAA;&#x73AF;&#x53D8;&#x91CF;&#x6CC4;&#x9732;&#x4E3A;&#x5168;&#x5C40;&#x53D8;&#x91CF;&#xFF0C;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {</div><div class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  };</div><div class="line">}</div><div class="line">a[<span class="number">6</span>](); <span class="comment">// 10</span></div></pre></td></tr></table></figure></p>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x4E2D;&#xFF0C;&#x53D8;&#x91CF;i&#x662F;var&#x58F0;&#x660E;&#x7684;&#xFF0C;&#x5728;&#x5168;&#x5C40;&#x8303;&#x56F4;&#x5185;&#x90FD;&#x6709;&#x6548;&#x3002;&#x6240;&#x4EE5;&#x6BCF;&#x4E00;&#x6B21;&#x5FAA;&#x73AF;&#xFF0C;&#x65B0;&#x7684;i&#x503C;&#x90FD;&#x4F1A;&#x8986;&#x76D6;&#x65E7;&#x503C;&#xFF0C;&#x5BFC;&#x81F4;&#x6700;&#x540E;&#x8F93;&#x51FA;&#x7684;&#x662F;&#x6700;&#x540E;&#x4E00;&#x8F6E;&#x7684;i&#x7684;&#x503C;&#x3002;&#x800C;&#x4F7F;&#x7528;let&#x5219;&#x4E0D;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x3002;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> a = [];</div><div class="line"><span class="keyword">for</span> (<span class="keyword">let</span> i = <span class="number">0</span>; i &lt; <span class="number">10</span>; i++) {</div><div class="line">  a[i] = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">    <span class="built_in">console</span>.log(i);</div><div class="line">  };</div><div class="line">}</div><div class="line">a[<span class="number">6</span>](); <span class="comment">// 6</span></div></pre></td></tr></table></figure>
+<p>const&#x4E5F;&#x7528;&#x6765;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#xFF0C;&#x4F46;&#x662F;&#x58F0;&#x660E;&#x7684;&#x662F;&#x5E38;&#x91CF;&#x3002;&#x4E00;&#x65E6;&#x58F0;&#x660E;&#xFF0C;&#x5E38;&#x91CF;&#x7684;&#x503C;&#x5C31;&#x4E0D;&#x80FD;&#x6539;&#x53D8;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> PI = <span class="built_in">Math</span>.PI;</div><div class="line"></div><div class="line">PI = <span class="number">23</span> <span class="comment">//Module build failed: SyntaxError: /es6/app.js: &quot;PI&quot; is read-only</span></div></pre></td></tr></table></figure></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x5C1D;&#x8BD5;&#x53BB;&#x6539;&#x53D8;&#x7528;const&#x58F0;&#x660E;&#x7684;&#x5E38;&#x91CF;&#x65F6;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;<br>const&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x597D;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#xFF0C;&#x5C31;&#x662F;&#x5F53;&#x6211;&#x4EEC;&#x5F15;&#x7528;&#x7B2C;&#x4E09;&#x65B9;&#x5E93;&#x7684;&#x65F6;&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#xFF0C;&#x7528;const&#x6765;&#x58F0;&#x660E;&#x53EF;&#x4EE5;&#x907F;&#x514D;&#x672A;&#x6765;&#x4E0D;&#x5C0F;&#x5FC3;&#x91CD;&#x547D;&#x540D;&#x800C;&#x5BFC;&#x81F4;&#x51FA;&#x73B0;bug&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> monent = <span class="built_in">require</span>(<span class="string">&apos;moment&apos;</span>);</div></pre></td></tr></table></figure></p>
+<p>2&#x3001;class, extends, super<br>&#x8FD9;&#x4E09;&#x4E2A;&#x7279;&#x6027;&#x6D89;&#x53CA;&#x4E86;ES5&#x4E2D;&#x6700;&#x4EE4;&#x4EBA;&#x5934;&#x75BC;&#x7684;&#x7684;&#x51E0;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;&#x539F;&#x578B;&#x3001;&#x6784;&#x9020;&#x51FD;&#x6570;&#xFF0C;&#x7EE7;&#x627F;&#x2026;</p>
+<p>ES6&#x63D0;&#x4F9B;&#x4E86;&#x66F4;&#x63A5;&#x8FD1;&#x4F20;&#x7EDF;&#x8BED;&#x8A00;&#x7684;&#x5199;&#x6CD5;&#xFF0C;&#x5F15;&#x5165;&#x4E86;Class&#xFF08;&#x7C7B;&#xFF09;&#x8FD9;&#x4E2A;&#x6982;&#x5FF5;&#x3002;&#x65B0;&#x7684;class&#x5199;&#x6CD5;&#x8BA9;&#x5BF9;&#x8C61;&#x539F;&#x578B;&#x7684;&#x5199;&#x6CD5;&#x66F4;&#x52A0;&#x6E05;&#x6670;&#x3001;&#x66F4;&#x50CF;&#x9762;&#x5411;&#x5BF9;&#x8C61;&#x7F16;&#x7A0B;&#x7684;&#x8BED;&#x6CD5;&#xFF0C;&#x4E5F;&#x66F4;&#x52A0;&#x901A;&#x4FD7;&#x6613;&#x61C2;&#x3002;</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>{</div><div class="line">    <span class="keyword">constructor</span>(){</div><div class="line">        <span class="keyword">this</span>.type = <span class="string">&apos;animal&apos;</span></div><div class="line">    }</div><div class="line">    says(say){</div><div class="line">        <span class="built_in">console</span>.log(<span class="keyword">this</span>.type + <span class="string">&apos; says &apos;</span> + say)</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">let</span> animal = <span class="keyword">new</span> Animal()</div><div class="line">animal.says(<span class="string">&apos;hello&apos;</span>) <span class="comment">//animal says hello</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Cat</span> <span class="keyword">extends</span> <span class="title">Animal</span> </span>{</div><div class="line">    <span class="keyword">constructor</span>(){</div><div class="line">        <span class="keyword">super</span>()</div><div class="line">        <span class="keyword">this</span>.type = <span class="string">&apos;cat&apos;</span></div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="keyword">let</span> cat = <span class="keyword">new</span> Cat()</div><div class="line">cat.says(<span class="string">&apos;hello&apos;</span>) <span class="comment">//cat says hello</span></div></pre></td></tr></table></figure>
+<p>&#x4E0A;&#x9762;&#x4EE3;&#x7801;&#x9996;&#x5148;&#x7528;class&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;&#x201C;&#x7C7B;&#x201D;&#xFF0C;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x91CC;&#x9762;&#x6709;&#x4E00;&#x4E2A;constructor&#x65B9;&#x6CD5;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x6784;&#x9020;&#x65B9;&#x6CD5;&#xFF0C;&#x800C;this&#x5173;&#x952E;&#x5B57;&#x5219;&#x4EE3;&#x8868;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x3002;&#x7B80;&#x5355;&#x5730;&#x8BF4;&#xFF0C;constructor&#x5185;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x662F;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x81EA;&#x5DF1;&#x7684;&#xFF0C;&#x800C;constructor&#x5916;&#x5B9A;&#x4E49;&#x7684;&#x65B9;&#x6CD5;&#x548C;&#x5C5E;&#x6027;&#x5219;&#x662F;&#x6240;&#x6709;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;&#x53EF;&#x4EE5;&#x5171;&#x4EAB;&#x7684;&#x3002;</p>
+<p>Class&#x4E4B;&#x95F4;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;extends&#x5173;&#x952E;&#x5B57;&#x5B9E;&#x73B0;&#x7EE7;&#x627F;&#xFF0C;&#x8FD9;&#x6BD4;ES5&#x7684;&#x901A;&#x8FC7;&#x4FEE;&#x6539;&#x539F;&#x578B;&#x94FE;&#x5B9E;&#x73B0;&#x7EE7;&#x627F;&#xFF0C;&#x8981;&#x6E05;&#x6670;&#x548C;&#x65B9;&#x4FBF;&#x5F88;&#x591A;&#x3002;&#x4E0A;&#x9762;&#x5B9A;&#x4E49;&#x4E86;&#x4E00;&#x4E2A;Cat&#x7C7B;&#xFF0C;&#x8BE5;&#x7C7B;&#x901A;&#x8FC7;extends&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x7EE7;&#x627F;&#x4E86;Animal&#x7C7B;&#x7684;&#x6240;&#x6709;&#x5C5E;&#x6027;&#x548C;&#x65B9;&#x6CD5;&#x3002;</p>
+<p>super&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x5B83;&#x6307;&#x4EE3;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#xFF08;&#x5373;&#x7236;&#x7C7B;&#x7684;this&#x5BF9;&#x8C61;&#xFF09;&#x3002;&#x5B50;&#x7C7B;&#x5FC5;&#x987B;&#x5728;constructor&#x65B9;&#x6CD5;&#x4E2D;&#x8C03;&#x7528;super&#x65B9;&#x6CD5;&#xFF0C;&#x5426;&#x5219;&#x65B0;&#x5EFA;&#x5B9E;&#x4F8B;&#x65F6;&#x4F1A;&#x62A5;&#x9519;&#x3002;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;&#x5B50;&#x7C7B;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;this&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x662F;&#x7EE7;&#x627F;&#x7236;&#x7C7B;&#x7684;this&#x5BF9;&#x8C61;&#xFF0C;&#x7136;&#x540E;&#x5BF9;&#x5176;&#x8FDB;&#x884C;&#x52A0;&#x5DE5;&#x3002;&#x5982;&#x679C;&#x4E0D;&#x8C03;&#x7528;super&#x65B9;&#x6CD5;&#xFF0C;&#x5B50;&#x7C7B;&#x5C31;&#x5F97;&#x4E0D;&#x5230;this&#x5BF9;&#x8C61;&#x3002;</p>
+<p>ES6&#x7684;&#x7EE7;&#x627F;&#x673A;&#x5236;&#xFF0C;&#x5B9E;&#x8D28;&#x662F;&#x5148;&#x521B;&#x9020;&#x7236;&#x7C7B;&#x7684;&#x5B9E;&#x4F8B;&#x5BF9;&#x8C61;this&#xFF08;&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5148;&#x8C03;&#x7528;super&#x65B9;&#x6CD5;&#xFF09;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x7528;&#x5B50;&#x7C7B;&#x7684;&#x6784;&#x9020;&#x51FD;&#x6570;&#x4FEE;&#x6539;this&#x3002;</p>
+<p>3&#x3001;arrow function<br>&#x8FD9;&#x4E2A;&#x6050;&#x6015;&#x662F;ES6&#x6700;&#x6700;&#x5E38;&#x7528;&#x7684;&#x4E00;&#x4E2A;&#x65B0;&#x7279;&#x6027;&#x4E86;&#xFF0C;&#x7528;&#x5B83;&#x6765;&#x5199;function&#x6BD4;&#x539F;&#x6765;&#x7684;&#x5199;&#x6CD5;&#x8981;&#x7B80;&#x6D01;&#x6E05;&#x6670;&#x5F88;&#x591A;:<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">i</span>)</span>{ <span class="keyword">return</span> i + <span class="number">1</span>; } <span class="comment">//ES5</span></div><div class="line">(i) =&gt; i + <span class="number">1</span> <span class="comment">//ES6</span></div></pre></td></tr></table></figure></p>
+<p>&#x5982;&#x679C;&#x65B9;&#x7A0B;&#x6BD4;&#x8F83;&#x590D;&#x6742;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x7528;{}&#x628A;&#x4EE3;&#x7801;&#x5305;&#x8D77;&#x6765;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>(<span class="params">x, y</span>) </span>{</div><div class="line">    x++;</div><div class="line">    y--;</div><div class="line">    <span class="keyword">return</span> x + y;</div><div class="line">}</div><div class="line">(x, y) =&gt; {x++; y--; <span class="keyword">return</span> x+y}</div></pre></td></tr></table></figure></p>
+<p>&#x9664;&#x4E86;&#x770B;&#x4E0A;&#x53BB;&#x66F4;&#x7B80;&#x6D01;&#x4EE5;&#x5916;&#xFF0C;arrow function&#x8FD8;&#x6709;&#x4E00;&#x9879;&#x8D85;&#x7EA7;&#x65E0;&#x654C;&#x7684;&#x529F;&#x80FD;&#xFF01;<br>&#x957F;&#x671F;&#x4EE5;&#x6765;&#xFF0C;JavaScript&#x8BED;&#x8A00;&#x7684;this&#x5BF9;&#x8C61;&#x4E00;&#x76F4;&#x662F;&#x4E00;&#x4E2A;&#x4EE4;&#x4EBA;&#x5934;&#x75DB;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x5728;&#x5BF9;&#x8C61;&#x65B9;&#x6CD5;&#x4E2D;&#x4F7F;&#x7528;this&#xFF0C;&#x5FC5;&#x987B;&#x975E;&#x5E38;&#x5C0F;&#x5FC3;&#x3002;&#x4F8B;&#x5982;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>{</div><div class="line">    <span class="keyword">constructor</span>(){</div><div class="line">        <span class="keyword">this</span>.type = <span class="string">&apos;animal&apos;</span></div><div class="line">    }</div><div class="line">    says(say){</div><div class="line">        setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.type + <span class="string">&apos; says &apos;</span> + say)</div><div class="line">        }, <span class="number">1000</span>)</div><div class="line">    }</div><div class="line">}</div><div class="line"></div><div class="line"> <span class="keyword">var</span> animal = <span class="keyword">new</span> Animal()</div><div class="line"> animal.says(<span class="string">&apos;hi&apos;</span>)  <span class="comment">//undefined says hi</span></div></pre></td></tr></table></figure></p>
+<p>&#x8FD0;&#x884C;&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x8FD9;&#x662F;&#x56E0;&#x4E3A;setTimeout&#x4E2D;&#x7684;this&#x6307;&#x5411;&#x7684;&#x662F;&#x5168;&#x5C40;&#x5BF9;&#x8C61;&#x3002;&#x6240;&#x4EE5;&#x4E3A;&#x4E86;&#x8BA9;&#x5B83;&#x80FD;&#x591F;&#x6B63;&#x786E;&#x7684;&#x8FD0;&#x884C;&#xFF0C;&#x4F20;&#x7EDF;&#x7684;&#x89E3;&#x51B3;&#x65B9;&#x6CD5;&#x6709;&#x4E24;&#x79CD;&#xFF1A;</p>
+<p>&#x7B2C;&#x4E00;&#x79CD;&#x662F;&#x5C06;this&#x4F20;&#x7ED9;self,&#x518D;&#x7528;self&#x6765;&#x6307;&#x4EE3;this<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">says(say){</div><div class="line">   <span class="keyword">var</span> self = <span class="keyword">this</span>;</div><div class="line">   setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">      <span class="built_in">console</span>.log(self.type + <span class="string">&apos; says &apos;</span> + say)</div><div class="line">   }, <span class="number">1000</span>)</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x65B9;&#x6CD5;&#x662F;&#x7528;bind(this),&#x5373;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">says(say){</div><div class="line">     setTimeout(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">         <span class="built_in">console</span>.log(<span class="keyword">this</span>.type + <span class="string">&apos; says &apos;</span> + say)</div><div class="line">     }.bind(<span class="keyword">this</span>), <span class="number">1000</span>)</div><div class="line">  }</div></pre></td></tr></table></figure></p>
+<p>&#x4F46;&#x73B0;&#x5728;&#x6211;&#x4EEC;&#x6709;&#x4E86;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x4E0D;&#x9700;&#x8981;&#x8FD9;&#x4E48;&#x9EBB;&#x70E6;&#x4E86;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span> </span>{</div><div class="line">    <span class="keyword">constructor</span>(){</div><div class="line">        <span class="keyword">this</span>.type = <span class="string">&apos;animal&apos;</span></div><div class="line">    }</div><div class="line">    says(say){</div><div class="line">        setTimeout( <span class="function"><span class="params">()</span> =&gt;</span> {</div><div class="line">            <span class="built_in">console</span>.log(<span class="keyword">this</span>.type + <span class="string">&apos; says &apos;</span> + say)</div><div class="line">        }, <span class="number">1000</span>)</div><div class="line">    }</div><div class="line">}</div><div class="line"> <span class="keyword">var</span> animal = <span class="keyword">new</span> Animal()</div><div class="line"> animal.says(<span class="string">&apos;hi&apos;</span>)  <span class="comment">//animal says hi</span></div></pre></td></tr></table></figure></p>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x4F7F;&#x7528;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x4F53;&#x5185;&#x7684;this&#x5BF9;&#x8C61;&#xFF0C;&#x5C31;&#x662F;&#x5B9A;&#x4E49;&#x65F6;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x4F7F;&#x7528;&#x65F6;&#x6240;&#x5728;&#x7684;&#x5BF9;&#x8C61;&#x3002;<br>&#x5E76;&#x4E0D;&#x662F;&#x56E0;&#x4E3A;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x5185;&#x90E8;&#x6709;&#x7ED1;&#x5B9A;this&#x7684;&#x673A;&#x5236;&#xFF0C;&#x5B9E;&#x9645;&#x539F;&#x56E0;&#x662F;&#x7BAD;&#x5934;&#x51FD;&#x6570;&#x6839;&#x672C;&#x6CA1;&#x6709;&#x81EA;&#x5DF1;&#x7684;this&#xFF0C;&#x5B83;&#x7684;this&#x662F;&#x7EE7;&#x627F;&#x5916;&#x9762;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x5185;&#x90E8;&#x7684;this&#x5C31;&#x662F;&#x5916;&#x5C42;&#x4EE3;&#x7801;&#x5757;&#x7684;this&#x3002;</p>
+<p>4&#x3001;template string<br>&#x8FD9;&#x4E2A;&#x4E1C;&#x897F;&#x4E5F;&#x662F;&#x975E;&#x5E38;&#x6709;&#x7528;&#xFF0C;&#x5F53;&#x6211;&#x4EEC;&#x8981;&#x63D2;&#x5165;&#x5927;&#x6BB5;&#x7684;html&#x5185;&#x5BB9;&#x5230;&#x6587;&#x6863;&#x4E2D;&#x65F6;&#xFF0C;&#x4F20;&#x7EDF;&#x7684;&#x5199;&#x6CD5;&#x975E;&#x5E38;&#x9EBB;&#x70E6;&#xFF0C;&#x6240;&#x4EE5;&#x4E4B;&#x524D;&#x6211;&#x4EEC;&#x901A;&#x5E38;&#x4F1A;&#x5F15;&#x7528;&#x4E00;&#x4E9B;&#x6A21;&#x677F;&#x5DE5;&#x5177;&#x5E93;&#xFF0C;&#x6BD4;&#x5982;mustache&#x7B49;&#x7B49;&#x3002;</p>
+<p>&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x5148;&#x770B;&#x4E0B;&#x9762;&#x4E00;&#x6BB5;&#x4EE3;&#x7801;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">&quot;#result&quot;</span>).append(</div><div class="line">  <span class="string">&quot;There are &lt;b&gt;&quot;</span> + basket.count + <span class="string">&quot;&lt;/b&gt; &quot;</span> +</div><div class="line">  <span class="string">&quot;items in your basket, &quot;</span> +</div><div class="line">  <span class="string">&quot;&lt;em&gt;&quot;</span> + basket.onSale +</div><div class="line">  <span class="string">&quot;&lt;/em&gt; are on sale!&quot;</span></div><div class="line">);</div></pre></td></tr></table></figure></p>
+<p>&#x6211;&#x4EEC;&#x8981;&#x7528;&#x4E00;&#x5806;&#x7684;&#x2019;+&#x2019;&#x53F7;&#x6765;&#x8FDE;&#x63A5;&#x6587;&#x672C;&#x4E0E;&#x53D8;&#x91CF;&#xFF0C;&#x800C;&#x4F7F;&#x7528;ES6&#x7684;&#x65B0;&#x7279;&#x6027;&#x6A21;&#x677F;&#x5B57;&#x7B26;&#x4E32;``<br>&#x540E;&#xFF0C;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8FD9;&#x4E48;&#x6765;&#x5199;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">$(<span class="string">&quot;#result&quot;</span>).append(<span class="string">`</span></div><div class="line">  There are &lt;b&gt;<span class="subst">${basket.count}</span>&lt;/b&gt; items</div><div class="line">   in your basket, &lt;em&gt;<span class="subst">${basket.onSale}</span>&lt;/em&gt;</div><div class="line">  are on sale!</div><div class="line">`);</div></pre></td></tr></table></figure></p>
+<p>&#x7528;&#x53CD;&#x5F15;&#x53F7;( ` )&#x6765;&#x6807;&#x8BC6;&#x8D77;&#x59CB;&#xFF0C;&#x7528;<code>${}</code>&#x6765;&#x5F15;&#x7528;&#x53D8;&#x91CF;&#xFF0C;&#x800C;&#x4E14;&#x6240;&#x6709;&#x7684;&#x7A7A;&#x683C;&#x548C;&#x7F29;&#x8FDB;&#x90FD;&#x4F1A;&#x88AB;&#x4FDD;&#x7559;&#x5728;&#x8F93;&#x51FA;&#x4E4B;&#x4E2D;&#x3002;</p>
+<p>5&#x3001;destructuring<br>ES6&#x5141;&#x8BB8;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x6A21;&#x5F0F;&#xFF0C;&#x4ECE;&#x6570;&#x7EC4;&#x548C;&#x5BF9;&#x8C61;&#x4E2D;&#x63D0;&#x53D6;&#x503C;&#xFF0C;&#x5BF9;&#x53D8;&#x91CF;&#x8FDB;&#x884C;&#x8D4B;&#x503C;&#xFF0C;&#x8FD9;&#x88AB;&#x79F0;&#x4E3A;&#x89E3;&#x6784;&#xFF08;Destructuring&#xFF09;&#x3002;<br>&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> cat = <span class="string">&apos;ken&apos;</span></div><div class="line"><span class="keyword">let</span> dog = <span class="string">&apos;lili&apos;</span></div><div class="line"><span class="keyword">let</span> zoo = {<span class="attr">cat</span>: cat, <span class="attr">dog</span>: dog}</div><div class="line"><span class="built_in">console</span>.log(zoo)  <span class="comment">//Object {cat: &quot;ken&quot;, dog: &quot;lili&quot;}</span></div></pre></td></tr></table></figure></p>
+<p>&#x7528;ES6&#x5B8C;&#x5168;&#x53EF;&#x4EE5;&#x50CF;&#x4E0B;&#x9762;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> cat = <span class="string">&apos;ken&apos;</span></div><div class="line"><span class="keyword">let</span> dog = <span class="string">&apos;lili&apos;</span></div><div class="line"><span class="keyword">let</span> zoo = {cat, dog}</div><div class="line"><span class="built_in">console</span>.log(zoo)  <span class="comment">//Object {cat: &quot;ken&quot;, dog: &quot;lili&quot;}</span></div></pre></td></tr></table></figure></p>
+<p>&#x53CD;&#x8FC7;&#x6765;&#x53EF;&#x4EE5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> dog = {<span class="attr">type</span>: <span class="string">&apos;animal&apos;</span>, <span class="attr">many</span>: <span class="number">2</span>}</div><div class="line"><span class="keyword">let</span> { type, many} = dog</div><div class="line"><span class="built_in">console</span>.log(type, many)   <span class="comment">//animal 2</span></div></pre></td></tr></table></figure></p>
+<p>6&#x3001;default, rest<br>default&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x610F;&#x601D;&#x5C31;&#x662F;&#x9ED8;&#x8BA4;&#x503C;&#x3002;&#x5927;&#x5BB6;&#x53EF;&#x4EE5;&#x770B;&#x4E0B;&#x9762;&#x7684;&#x4F8B;&#x5B50;&#xFF0C;&#x8C03;&#x7528;<code>animal()</code>&#x65B9;&#x6CD5;&#x65F6;&#x5FD8;&#x4E86;&#x4F20;&#x53C2;&#x6570;&#xFF0C;&#x4F20;&#x7EDF;&#x7684;&#x505A;&#x6CD5;&#x5C31;&#x662F;&#x52A0;&#x4E0A;&#x8FD9;&#x4E00;&#x53E5;<code>type = type || &apos;cat&apos;</code>&#x6765;&#x6307;&#x5B9A;&#x9ED8;&#x8BA4;&#x503C;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animal</span>(<span class="params">type</span>)</span>{</div><div class="line">    type = type || <span class="string">&apos;cat&apos;</span>  </div><div class="line">    <span class="built_in">console</span>.log(type)</div><div class="line">}</div><div class="line">animal()</div></pre></td></tr></table></figure></p>
+<p>&#x5982;&#x679C;&#x7528;ES6&#x6211;&#x4EEC;&#x800C;&#x5DF2;&#x76F4;&#x63A5;&#x8FD9;&#x4E48;&#x5199;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animal</span>(<span class="params">type = <span class="string">&apos;cat&apos;</span></span>)</span>{</div><div class="line">    <span class="built_in">console</span>.log(type)</div><div class="line">}</div><div class="line">animal()</div></pre></td></tr></table></figure></p>
+<p>&#x6700;&#x540E;&#x4E00;&#x4E2A;rest&#x8BED;&#x6CD5;&#x4E5F;&#x5F88;&#x7B80;&#x5355;&#xFF0C;&#x76F4;&#x63A5;&#x770B;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animals</span>(<span class="params">...types</span>)</span>{</div><div class="line">    <span class="built_in">console</span>.log(types)</div><div class="line">}</div><div class="line">animals(<span class="string">&apos;cat&apos;</span>, <span class="string">&apos;dog&apos;</span>, <span class="string">&apos;fish&apos;</span>) <span class="comment">//[&quot;cat&quot;, &quot;dog&quot;, &quot;fish&quot;]</span></div></pre></td></tr></table></figure></p>
+<p>&#x800C;&#x5982;&#x679C;&#x4E0D;&#x7528;ES6&#x7684;&#x8BDD;&#xFF0C;&#x6211;&#x4EEC;&#x5219;&#x5F97;&#x4F7F;&#x7528;ES5&#x7684;arguments&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">animals</span>(<span class="params"></span>)</span>{</div><div class="line">   <span class="built_in">console</span>.log(<span class="built_in">arguments</span>[<span class="number">0</span>]+<span class="built_in">arguments</span>[<span class="number">1</span>]);</div><div class="line">}</div><div class="line">animals(<span class="string">&apos;cat&apos;</span>, <span class="string">&apos;dog&apos;</span>, <span class="string">&apos;fish&apos;</span>)</div></pre></td></tr></table></figure></p>
+<p>&#x6CE8;&#xFF1A;&#x4EE5;&#x4E0A;&#x5185;&#x5BB9;&#x6765;&#x81EA;[30&#x5206;&#x949F;&#x638C;&#x63E1;ES6/ES2015&#x6838;&#x5FC3;&#x5185;&#x5BB9;][<a href="http://www.jianshu.com/p/ebfeb687eb70" target="_blank" rel="external">http://www.jianshu.com/p/ebfeb687eb70</a>]<br>&#x4EE5;&#x4E0B;&#x6458;&#x81EA;[ECMAScript&#x5165;&#x95E8;][<a href="http://es6.ruanyifeng.com/" target="_blank" rel="external">http://es6.ruanyifeng.com/</a>]</p>
+<p>8&#x3001;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E0E;&#x51FD;&#x6570;&#x58F0;&#x660E;<br>&#x51FD;&#x6570;&#x80FD;&#x4E0D;&#x80FD;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x4E2D;&#x58F0;&#x660E;&#xFF1F;&#x8FD9;&#x662F;&#x4E00;&#x4E2A;&#x76F8;&#x5F53;&#x4EE4;&#x4EBA;&#x6DF7;&#x6DC6;&#x7684;&#x95EE;&#x9898;&#x3002;<br>ES5 &#x89C4;&#x5B9A;&#xFF0C;&#x51FD;&#x6570;&#x53EA;&#x80FD;&#x5728;&#x9876;&#x5C42;&#x4F5C;&#x7528;&#x57DF;&#x548C;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x4E2D;&#x58F0;&#x660E;&#xFF0C;&#x4E0D;&#x80FD;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x58F0;&#x660E;&#x3002;</p>
+<p>ES6 &#x5F15;&#x5165;&#x4E86;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#xFF0C;&#x660E;&#x786E;&#x5141;&#x8BB8;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x4E2D;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x3002;ES6 &#x89C4;&#x5B9A;&#xFF0C;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x4E2D;&#xFF0C;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x8BED;&#x53E5;&#x7684;&#x884C;&#x4E3A;&#x7C7B;&#x4F3C;&#x4E8E;let&#xFF0C;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x4E4B;&#x5916;&#x4E0D;&#x53EF;&#x5F15;&#x7528;&#x3002;</p>
+<p>&#x4E3A;&#x4E86;&#x51CF;&#x8F7B;&#x56E0;&#x6B64;&#x4EA7;&#x751F;&#x7684;&#x4E0D;&#x517C;&#x5BB9;&#x95EE;&#x9898;&#xFF0C;ES6&#x5728;&#x9644;&#x5F55;B&#x91CC;&#x9762;&#x89C4;&#x5B9A;&#xFF0C;&#x6D4F;&#x89C8;&#x5668;&#x7684;&#x5B9E;&#x73B0;&#x53EF;&#x4EE5;&#x4E0D;&#x9075;&#x5B88;&#x4E0A;&#x9762;&#x7684;&#x89C4;&#x5B9A;&#xFF0C;&#x6709;&#x81EA;&#x5DF1;&#x7684;&#x884C;&#x4E3A;&#x65B9;&#x5F0F;&#x3002;</p>
+<ul>
+<li>&#x5141;&#x8BB8;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x3002;</li>
+<li>&#x51FD;&#x6570;&#x58F0;&#x660E;&#x7C7B;&#x4F3C;&#x4E8E;var&#xFF0C;&#x5373;&#x4F1A;&#x63D0;&#x5347;&#x5230;&#x5168;&#x5C40;&#x4F5C;&#x7528;&#x57DF;&#x6216;&#x51FD;&#x6570;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x5934;&#x90E8;&#x3002;</li>
+<li>&#x540C;&#x65F6;&#xFF0C;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x8FD8;&#x4F1A;&#x63D0;&#x5347;&#x5230;&#x6240;&#x5728;&#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x5934;&#x90E8;&#x3002;</li>
+</ul>
+<p>&#x6CE8;&#x610F;&#xFF0C;&#x4E0A;&#x9762;&#x4E09;&#x6761;&#x89C4;&#x5219;&#x53EA;&#x5BF9; ES6 &#x7684;&#x6D4F;&#x89C8;&#x5668;&#x5B9E;&#x73B0;&#x6709;&#x6548;&#xFF0C;&#x5176;&#x4ED6;&#x73AF;&#x5883;&#x7684;&#x5B9E;&#x73B0;&#x4E0D;&#x7528;&#x9075;&#x5B88;&#xFF0C;&#x8FD8;&#x662F;&#x5C06;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x7684;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x5F53;&#x4F5C;let&#x5904;&#x7406;&#x3002;</p>
+<p>&#x6839;&#x636E;&#x8FD9;&#x4E09;&#x6761;&#x89C4;&#x5219;&#xFF0C;&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x7684; ES6 &#x73AF;&#x5883;&#x4E2D;&#xFF0C;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x58F0;&#x660E;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x884C;&#x4E3A;&#x7C7B;&#x4F3C;&#x4E8E;var&#x58F0;&#x660E;&#x7684;&#x53D8;&#x91CF;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// &#x6D4F;&#x89C8;&#x5668;&#x7684; ES6 &#x73AF;&#x5883;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{ <span class="built_in">console</span>.log(<span class="string">&apos;I am outside!&apos;</span>); }</div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">  <span class="keyword">if</span> (<span class="literal">false</span>) {</div><div class="line">    <span class="comment">// &#x91CD;&#x590D;&#x58F0;&#x660E;&#x4E00;&#x6B21;&#x51FD;&#x6570;f</span></div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{ <span class="built_in">console</span>.log(<span class="string">&apos;I am inside!&apos;</span>); }</div><div class="line">  }</div><div class="line"></div><div class="line">  f();</div><div class="line">}());</div><div class="line"><span class="comment">// Uncaught TypeError: f is not a function</span></div></pre></td></tr></table></figure></p>
+<p>&#x4E0A;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x5728;&#x7B26;&#x5408; ES6 &#x7684;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#xFF0C;&#x90FD;&#x4F1A;&#x62A5;&#x9519;&#xFF0C;&#x56E0;&#x4E3A;&#x5B9E;&#x9645;&#x8FD0;&#x884C;&#x7684;&#x662F;&#x4E0B;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// &#x6D4F;&#x89C8;&#x5668;&#x7684; ES6 &#x73AF;&#x5883;</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{ <span class="built_in">console</span>.log(<span class="string">&apos;I am outside!&apos;</span>); }</div><div class="line">(<span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">  <span class="keyword">var</span> f = <span class="literal">undefined</span>;</div><div class="line">  <span class="keyword">if</span> (<span class="literal">false</span>) {</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{ <span class="built_in">console</span>.log(<span class="string">&apos;I am inside!&apos;</span>); }</div><div class="line">  }</div><div class="line"></div><div class="line">  f();</div><div class="line">}());</div><div class="line"><span class="comment">// Uncaught TypeError: f is not a function</span></div></pre></td></tr></table></figure></p>
+<p>&#x8003;&#x8651;&#x5230;&#x73AF;&#x5883;&#x5BFC;&#x81F4;&#x7684;&#x884C;&#x4E3A;&#x5DEE;&#x5F02;&#x592A;&#x5927;&#xFF0C;&#x5E94;&#x8BE5;&#x907F;&#x514D;&#x5728;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5185;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x3002;&#x5982;&#x679C;&#x786E;&#x5B9E;&#x9700;&#x8981;&#xFF0C;&#x4E5F;&#x5E94;&#x8BE5;&#x5199;&#x6210;&#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x51FD;&#x6570;&#x58F0;&#x660E;&#x8BED;&#x53E5;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// &#x51FD;&#x6570;&#x58F0;&#x660E;&#x8BED;&#x53E5;</span></div><div class="line">{</div><div class="line">  <span class="keyword">let</span> a = <span class="string">&apos;secret&apos;</span>;</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">  }</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// &#x51FD;&#x6570;&#x8868;&#x8FBE;&#x5F0F;</span></div><div class="line">{</div><div class="line">  <span class="keyword">let</span> a = <span class="string">&apos;secret&apos;</span>;</div><div class="line">  <span class="keyword">let</span> f = <span class="function"><span class="keyword">function</span> (<span class="params"></span>) </span>{</div><div class="line">    <span class="keyword">return</span> a;</div><div class="line">  };</div><div class="line">}</div></pre></td></tr></table></figure></p>
+<p>&#x53E6;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x5730;&#x65B9;&#x3002;ES6 &#x7684;&#x5757;&#x7EA7;&#x4F5C;&#x7528;&#x57DF;&#x5141;&#x8BB8;&#x58F0;&#x660E;&#x51FD;&#x6570;&#x7684;&#x89C4;&#x5219;&#xFF0C;&#x53EA;&#x5728;&#x4F7F;&#x7528;&#x5927;&#x62EC;&#x53F7;&#x7684;&#x60C5;&#x51B5;&#x4E0B;&#x6210;&#x7ACB;&#xFF0C;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4F7F;&#x7528;&#x5927;&#x62EC;&#x53F7;&#xFF0C;&#x5C31;&#x4F1A;&#x62A5;&#x9519;&#x3002;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="comment">// &#x4E0D;&#x62A5;&#x9519;</span></div><div class="line"><span class="meta">&apos;use strict&apos;</span>;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>) {</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{}</div><div class="line">}</div><div class="line"></div><div class="line"><span class="comment">// &#x62A5;&#x9519;</span></div><div class="line"><span class="meta">&apos;use strict&apos;</span>;</div><div class="line"><span class="keyword">if</span> (<span class="literal">true</span>)</div><div class="line">  <span class="function"><span class="keyword">function</span> <span class="title">f</span>(<span class="params"></span>) </span>{}</div></pre></td></tr></table></figure></p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags"></i>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/ES6/">ES6</a></li></ul>
+	</div>
+
+      
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="../../../03/27/你有必要知道的25个JavaScript面试题/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">你有必要知道的25个JavaScript面试题</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+
+
+
+
+
+
+
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2017 死兔比
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    <script>
+	var yiliaConfig = {
+		mathjax: false,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false,
+		root: "/",
+		innerArchive: true
+	}
+</script>
+
+<script src="../../../.././main.js"></script>
+
+
+    
+<div class="tools-col">
+  <ul class="btn-wrap">
+    
+      <li class="chose" data-hook="tools-section-all"><span class="text">全部</span><i class="icon-book"></i></li>
+    
+    
+      <li data-hook="tools-section-tag"><span class="text">标签</span><i class="icon-price-tags"></i></li>
+    
+    
+    
+      <li data-hook="tools-section-me"><span class="text">我</span><i class="icon-smile"></i></li>
+    
+  </ul>
+  <div class="tools-wrap">
+    
+    	<section class="tools-section tools-section-all chose">
+    	</section>
+    
+
+    
+    	<section class="tools-section tools-section-tag">
+    			<div class="widget tagcloud" id="js-tagcloud">
+    				<a href="../../../../tags/ES6/" style="font-size: 10px;">ES6</a> <a href="../../../../tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="../../../../tags/css/" style="font-size: 10px;">css</a> <a href="../../../../tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="../../../../tags/js/" style="font-size: 20px;">js</a> <a href="../../../../tags/tips/" style="font-size: 10px;">tips</a> <a href="../../../../tags/web/" style="font-size: 10px;">web</a> <a href="../../../../tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="../../../../tags/模块化编程/" style="font-size: 10px;">模块化编程</a> <a href="../../../../tags/移动端开发/" style="font-size: 10px;">移动端开发</a> <a href="../../../../tags/转载/" style="font-size: 10px;">转载</a> <a href="../../../../tags/随笔/" style="font-size: 15px;">随笔</a> <a href="../../../../tags/面试/" style="font-size: 10px;">面试</a>
+    			</div>
+    	</section>
+    
+
+    
+
+    
+    	<section class="tools-section tools-section-me">
+  	  	
+  	  		<div class="aboutme-wrap" id="js-aboutme">机智哲理强迫症girl&lt;br&gt;&lt;br&gt;百毒不侵&lt;br&gt;&lt;br&gt;爱旅行爱发呆  还有神经o(*￣▽￣*)ブ</div>
+  	  	
+    	</section>
+    
+  </div>
+  
+</div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+    <!-- Background of PhotoSwipe. 
+         It's a separate element as animating opacity is faster than rgba(). -->
+    <div class="pswp__bg"></div>
+
+    <!-- Slides wrapper with overflow:hidden. -->
+    <div class="pswp__scroll-wrap">
+
+        <!-- Container that holds slides. 
+            PhotoSwipe keeps only 3 of them in the DOM to save memory.
+            Don't modify these 3 pswp__item elements, data is added later on. -->
+        <div class="pswp__container">
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+            <div class="pswp__item"></div>
+        </div>
+
+        <!-- Default (PhotoSwipeUI_Default) interface on top of sliding area. Can be changed. -->
+        <div class="pswp__ui pswp__ui--hidden">
+
+            <div class="pswp__top-bar">
+
+                <!--  Controls are self-explanatory. Order can be changed. -->
+
+                <div class="pswp__counter"></div>
+
+                <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+
+                <button class="pswp__button pswp__button--share" style="display:none" title="Share"></button>
+
+                <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+
+                <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+
+                <!-- Preloader demo http://codepen.io/dimsemenov/pen/yyBWoR -->
+                <!-- element will get class pswp__preloader--active when preloader is running -->
+                <div class="pswp__preloader">
+                    <div class="pswp__preloader__icn">
+                      <div class="pswp__preloader__cut">
+                        <div class="pswp__preloader__donut"></div>
+                      </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+                <div class="pswp__share-tooltip"></div> 
+            </div>
+
+            <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+            </button>
+
+            <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+            </button>
+
+            <div class="pswp__caption">
+                <div class="pswp__caption__center"></div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+  </div>
+</body>
+</html>
