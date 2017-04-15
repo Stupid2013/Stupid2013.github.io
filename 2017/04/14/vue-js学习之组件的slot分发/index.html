@@ -6,21 +6,39 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="https://Stupid2013.github.io">
-  <title>死兔比的秘密基地</title>
+  <title>vue.js学习之组件的slot分发 | 死兔比的秘密基地</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="死兔比的秘密基地">
-<meta property="og:url" content="https://Stupid2013.github.io/index.html">
+  <meta name="description" content="vue.js&amp;#x5B66;&amp;#x4E60;&amp;#x7CFB;&amp;#x5217;&amp;#x7B2C;&amp;#x4E00;&amp;#x7BC7;&amp;#x3002;
+&amp;#x770B;&amp;#x4E86;&amp;#x5B98;&amp;#x7F51;&amp;#x7684;slot&amp;#x5206;&amp;#x53D1;&amp;#xFF0C;&amp;#x6CA1;&amp;#x5B8C;&amp;#x5168;&amp;#x5F04;&amp;#x61C2;&amp;#xFF0C;&amp;#x4E8E;&amp;#x66">
+<meta property="og:type" content="article">
+<meta property="og:title" content="vue.js学习之组件的slot分发">
+<meta property="og:url" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/index.html">
 <meta property="og:site_name" content="死兔比的秘密基地">
+<meta property="og:description" content="vue.js&amp;#x5B66;&amp;#x4E60;&amp;#x7CFB;&amp;#x5217;&amp;#x7B2C;&amp;#x4E00;&amp;#x7BC7;&amp;#x3002;
+&amp;#x770B;&amp;#x4E86;&amp;#x5B98;&amp;#x7F51;&amp;#x7684;slot&amp;#x5206;&amp;#x53D1;&amp;#xFF0C;&amp;#x6CA1;&amp;#x5B8C;&amp;#x5168;&amp;#x5F04;&amp;#x61C2;&amp;#xFF0C;&amp;#x4E8E;&amp;#x66">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot1.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot2.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot3.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot4.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot8.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot7.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot5.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot6.png">
+<meta property="og:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot9.png">
+<meta property="og:updated_time" content="2017-04-15T13:31:10.790Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="死兔比的秘密基地">
+<meta name="twitter:title" content="vue.js学习之组件的slot分发">
+<meta name="twitter:description" content="vue.js&amp;#x5B66;&amp;#x4E60;&amp;#x7CFB;&amp;#x5217;&amp;#x7B2C;&amp;#x4E00;&amp;#x7BC7;&amp;#x3002;
+&amp;#x770B;&amp;#x4E86;&amp;#x5B98;&amp;#x7F51;&amp;#x7684;slot&amp;#x5206;&amp;#x53D1;&amp;#xFF0C;&amp;#x6CA1;&amp;#x5B8C;&amp;#x5168;&amp;#x5F04;&amp;#x61C2;&amp;#xFF0C;&amp;#x4E8E;&amp;#x66">
+<meta name="twitter:image" content="https://Stupid2013.github.io/2017/04/14/vue-js学习之组件的slot分发/slot1.png">
   
     <link rel="alternative" href="/atom.xml" title="死兔比的秘密基地" type="application/atom+xml">
   
   
     <link rel="icon" href="/avatar/avatar.png">
   
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../../../../main.css">
   
 
 </head>
@@ -48,9 +66,9 @@
 		<nav class="header-menu">
 			<ul>
 			
-				<li><a href="index.html">主页</a></li>
+				<li><a href="../../../../index.html">主页</a></li>
 	        
-				<li><a href="/tags/随笔">随笔</a></li>
+				<li><a href="../../../../tags/随笔">随笔</a></li>
 	        
 			</ul>
 		</nav>
@@ -108,9 +126,9 @@
 			<nav class="header-menu">
 				<ul>
 				
-					<li><a href="index.html">主页</a></li>
+					<li><a href="../../../../index.html">主页</a></li>
 		        
-					<li><a href="/tags/随笔">随笔</a></li>
+					<li><a href="../../../../tags/随笔">随笔</a></li>
 		        
 				</ul>
 			</nav>
@@ -128,20 +146,18 @@
 </nav>
 
       <div class="body-wrap">
-        
-  
-    <article id="post-vue-js学习之组件的slot分发" class="article article-type-post" itemscope itemprop="blogPost">
+        <article id="post-vue-js学习之组件的slot分发" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="2017/04/14/vue-js学习之组件的slot分发/">vue.js学习之组件的slot分发</a>
+    <h1 class="article-title" itemprop="name">
+      vue.js学习之组件的slot分发
     </h1>
   
 
-        <a href="2017/04/14/vue-js学习之组件的slot分发/" class="archive-article-date">
+        <a href="" class="archive-article-date">
   	<time datetime="2017-04-14T15:46:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-14</time>
 </a>
       </header>
@@ -225,7 +241,7 @@
       
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/vue-js/">vue.js</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="../../../../tags/vue-js/">vue.js</a></li></ul>
 	</div>
 
       
@@ -238,474 +254,23 @@
   </div>
 </article>
 
-
-
-
-
-
-
-
   
-    <article id="post-ES6学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2017/04/06/ES6学习笔记/">ES6学习笔记</a>
-    </h1>
-  
-
-        <a href="2017/04/06/ES6学习笔记/" class="archive-article-date">
-  	<time datetime="2017-04-06T02:49:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-04-06</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1&#x3001;let&#x548C;const<br>&#x8FD9;&#x4E24;&#x4E2A;&#x7684;&#x7528;&#x9014;&#x4E0E;<code>var</code>&#x7C7B;&#x4F3C;&#xFF0C;&#x90FD;&#x662F;&#x7528;&#x6765;&#x58F0;&#x660E;&#x53D8;&#x91CF;&#x7684;&#xFF0C;&#x4F46;&#x5728;&#x5B9E;&#x9645;&#x8FD0;&#x7528;&#x4E2D;&#x4ED6;&#x4FE9;&#x90FD;&#x6709;&#x5404;&#x81EA;&#x7684;&#x7279;&#x6B8A;&#x7528;&#x9014;&#x3002;<br>&#x9996;&#x5148;&#x6765;&#x770B;&#x4E0B;&#x9762;&#x8FD9;&#x4E2A;&#x4F8B;&#x5B50;&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> name = <span class="string">&apos;zach&apos;</span></div><div class="line"><span class="keyword">while</span> (<span class="literal">true</span>) {</div><div class="line">    <span class="keyword">var</span> name = <span class="string">&apos;obama&apos;</span></div><div class="line">    <span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div><div class="line">    <span class="keyword">break</span></div><div class="line">}</div><div class="line"><span class="built_in">console</span>.log(name)  <span class="comment">//obama</span></div></pre></td></tr></table></figure></p>
-        <a class="article-more-a"  href="2017/04/06/ES6学习笔记/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/ES6/">ES6</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-你有必要知道的25个JavaScript面试题" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2017/03/27/你有必要知道的25个JavaScript面试题/">你有必要知道的25个JavaScript面试题</a>
-    </h1>
-  
-
-        <a href="2017/03/27/你有必要知道的25个JavaScript面试题/" class="archive-article-date">
-  	<time datetime="2017-03-27T10:24:19.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-03-27</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x672C;&#x6587;&#x8F6C;&#x8F7D;&#x81EA;<a href="https://github.com/dwqs/blog/issues/17">&#x4F60;&#x6709;&#x5FC5;&#x8981;&#x77E5;&#x9053;&#x7684; 25 &#x4E2A; JavaScript &#x9762;&#x8BD5;&#x9898;</a>&#xFF0C;&#x505A;&#x4E86;&#x4E9B;&#x8BB8;&#x4FEE;&#x6539;~</p>
-<p>1&#x3001;&#x4F7F;&#x7528;<code>typeof bar === &quot;object&quot;</code>&#x5224;&#x65AD; bar &#x662F;&#x4E0D;&#x662F;&#x4E00;&#x4E2A;&#x5BF9;&#x8C61;&#x6709;&#x4EC0;&#x4E48;&#x6F5C;&#x5728;&#x7684;&#x5F0A;&#x7AEF;&#xFF1F;&#x5982;&#x4F55;&#x907F;&#x514D;&#x8FD9;&#x79CD;&#x5F0A;&#x7AEF;&#xFF1F;<br>&#x4F7F;&#x7528; typeof &#x7684;&#x5F0A;&#x7AEF;&#x662F;&#x663E;&#x800C;&#x6613;&#x89C1;&#x7684;(&#x8FD9;&#x79CD;&#x5F0A;&#x7AEF;&#x540C;&#x4F7F;&#x7528; instanceof)&#xFF1A;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">let</span> obj = {};</div><div class="line"><span class="keyword">let</span> arr = [];</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj === <span class="string">&apos;object&apos;</span>);  <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> arr === <span class="string">&apos;object&apos;</span>);  <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span> === <span class="string">&apos;object&apos;</span>);  <span class="comment">//true</span></div></pre></td></tr></table></figure></p>
-        <a class="article-more-a"  href="2017/03/27/你有必要知道的25个JavaScript面试题/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/转载/">转载</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/面试/">面试</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-web开发tips" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2017/01/22/web开发tips/">web开发tips</a>
-    </h1>
-  
-
-        <a href="2017/01/22/web开发tips/" class="archive-article-date">
-  	<time datetime="2017-01-22T13:08:35.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2017-01-22</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.&#x4F7F;&#x7528;&#x5757;&#x4F5C;&#x7528;&#x57DF;&#x7533;&#x660E;function&#xFF0C;<strong>&#x9632;&#x6B62;&#x6C61;&#x67D3;&#x5168;&#x5C40;&#x53D8;&#x91CF;</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>{</div><div class="line">    <span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>)</span>{</div><div class="line">      alert(<span class="string">&quot;it works&quot;</span>);</div><div class="line">    }</div><div class="line"></div><div class="line">    fun();</div><div class="line">})()</div></pre></td></tr></table></figure></p>
-        <a class="article-more-a"  href="2017/01/22/web开发tips/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/js/">js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/tips/">tips</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/web/">web</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-RequireJS学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/22/RequireJS学习笔记/">RequireJS学习笔记</a>
-    </h1>
-  
-
-        <a href="2016/12/22/RequireJS学习笔记/" class="archive-article-date">
-  	<time datetime="2016-12-22T15:18:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-22</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x4F5C;&#x4E3A;&#x4E00;&#x540D;&#x540D;&#x526F;&#x5176;&#x5B9E;&#x7684;&#x524D;&#x7AEF;&#x5C0F;&#x83DC;&#x9E1F;&#xFF0C;&#x5728;&#x9879;&#x76EE;&#x5F00;&#x53D1;&#x8FC7;&#x7A0B;&#x4E2D;HTML&#x91CC;&#x9762;&#x7ECF;&#x5E38;&#x4F1A;&#x51FA;&#x73B0;&#x8FD9;&#x79CD;&#x4E11;&#x964B;&#x7684;&#x573A;&#x666F;&#xFF1A;<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;a.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;b.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;c.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;d.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;e.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;f.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;g.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;h.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">script</span> <span class="attr">type</span>=<span class="string">&quot;text/javascript&quot;</span> <span class="attr">src</span>=<span class="string">&quot;i.js&quot;</span>&gt;</span><span class="undefined"></span><span class="tag">&lt;/<span class="name">script</span>&gt;</span></div></pre></td></tr></table></figure></p>
-<p>&#x8FD9;&#x770B;&#x8D77;&#x6765;&#x7B80;&#x76F4;&#x592A;low&#x4E86;&#x597D;&#x561B;(#&#x2035;&#x2032;)&#x51F8;</p>
-        <a class="article-more-a"  href="2016/12/22/RequireJS学习笔记/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/RequireJS/">RequireJS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/模块化编程/">模块化编程</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-JavaScript权威指南（第6版）学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/20/JavaScript权威指南（第6版）学习笔记/">JavaScript权威指南（第6版）学习笔记</a>
-    </h1>
-  
-
-        <a href="2016/12/20/JavaScript权威指南（第6版）学习笔记/" class="archive-article-date">
-  	<time datetime="2016-12-20T12:23:28.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>1.&#x901A;&#x8FC7;&#x201C;.&#x201D;&#x6216;&#x201C;[]&#x201D;&#x6765;&#x8BBF;&#x95EE;&#x5BF9;&#x8C61;&#x5C5E;&#x6027;<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> book = {</div><div class="line">    <span class="attr">topic</span>:<span class="string">&quot;javascript&quot;</span>,</div><div class="line">    <span class="attr">fat</span>:<span class="literal">true</span></div><div class="line">}</div><div class="line">book.topic  <span class="comment">//=&gt; &quot;javascript&quot;</span></div><div class="line">book[<span class="string">&quot;fat&quot;</span>] <span class="comment">//=&gt;true</span></div><div class="line">book.author = <span class="string">&quot;stupid&quot;</span>; <span class="comment">//&#x901A;&#x8FC7;&#x8D4B;&#x503C;&#x6765;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x5C5E;&#x6027;</span></div><div class="line">book.contents = {};  <span class="comment">//{}&#x662F;&#x4E00;&#x4E2A;&#x7A7A;&#x5BF9;&#x8C61;&#xFF0C;&#x5B83;&#x6CA1;&#x6709;&#x5C5E;&#x6027;</span></div></pre></td></tr></table></figure></p>
-        <a class="article-more-a"  href="2016/12/20/JavaScript权威指南（第6版）学习笔记/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/js/">js</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-css-sprites实现原理" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/20/css-sprites实现原理/">css sprites实现原理</a>
-    </h1>
-  
-
-        <a href="2016/12/20/css-sprites实现原理/" class="archive-article-date">
-  	<time datetime="2016-12-20T12:01:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-20</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x4E00;&#x76F4;&#x542C;&#x8BF4;&#x96EA;&#x78A7;&#x56FE;&#x53EF;&#x4EE5;&#x51CF;&#x5C11;http&#x8BF7;&#x6C42;&#x6570;&#xFF0C;&#x63D0;&#x5347;&#x7F51;&#x9875;&#x6027;&#x80FD;&#xFF0C;&#x5374;&#x4E00;&#x76F4;&#x4E0D;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x5B9E;&#x73B0;&#x7684;&#xFF0C;&#x554A;&#xFF0C;&#x5C0F;&#x83DC;&#x9E1F;&#x3002;&#x3002;&#x3002;<br>&#x8FD9;&#x4E24;&#x5929;&#x6709;&#x7A7A;&#x5B66;&#x4E60;&#x4E86;&#x4E0B;&#xFF0C;&#x8D76;&#x7D27;&#x8BB0;&#x4E0B;&#x6765;&#xFF0C;&#x54E6;&#x8036;<br></p>
-        <a class="article-more-a"  href="2016/12/20/css-sprites实现原理/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/css/">css</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-12月17日" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/17/12月17日/">12月17日</a>
-    </h1>
-  
-
-        <a href="2016/12/17/12月17日/" class="archive-article-date">
-  	<time datetime="2016-12-17T06:45:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-17</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>2016&#x5E74;12&#x6708;17&#x65E5;  &#x973E;</p>
-<p>&#x7A97;&#x5916;&#x7684;&#x5929;&#x8FD8;&#x662F;&#x4E00;&#x7247;&#x96FE;&#x8499;&#x8499;&#xFF0C;&#x6210;&#x90FD;&#x7684;&#x5929;&#x6C14;&#x8D8A;&#x53D1;&#x7684;&#x5DEE;&#x52B2;&#x4E86;&#xFF0C;&#x7A81;&#x7136;&#x6709;&#x70B9;&#x62C5;&#x5FC3;&#x4F1A;&#x4E0D;&#x4F1A;&#x54EA;&#x4E00;&#x5929;&#x7A81;&#x7136;&#x5F97;&#x4E2A;&#x4EC0;&#x4E48;&#x7EDD;&#x75C7;&#xFF0C;&#x7136;&#x540E;&#x6084;&#x65E0;&#x58F0;&#x606F;&#x7684;&#x6B7B;&#x6389;&#xFF0C;&#x554A;&#xFF0C;&#x60F3;&#x60F3;&#x8FD8;&#x662F;&#x6709;&#x4E9B;&#x53EF;&#x6015;<br>&#x6BCF;&#x5230;&#x5468;&#x672B;&#x5C31;&#x7279;&#x522B;&#x7684;&#x9893;&#x5E9F;&#x7684;&#x6837;&#x5B50;&#xFF0C;&#x603B;&#x662F;&#x6709;&#x4E00;&#x5806;&#x83AB;&#x540D;&#x5176;&#x5999;&#x7684;&#x501F;&#x53E3;&#x963B;&#x6B62;&#x53BB;&#x505A;&#x5F88;&#x591A;&#x60F3;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x3002;<br></p>
-        <a class="article-more-a"  href="2016/12/17/12月17日/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-移动端web开发tips" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/13/移动端web开发tips/">移动端web开发tips</a>
-    </h1>
-  
-
-        <a href="2016/12/13/移动端web开发tips/" class="archive-article-date">
-  	<time datetime="2016-12-13T14:45:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-13</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x524D;&#x7AEF;&#x5F00;&#x53D1;&#x5C0F;&#x83DC;&#x9E1F;&#x4E00;&#x53EA;&#xFF0C;&#x5728;&#x6B64;&#x641C;&#x96C6;&#x9047;&#x5230;&#x7684;&#x6216;&#x8005;&#x6CA1;&#x6709;&#x9047;&#x5230;&#x7684;&#x4F46;&#x662F;&#x6709;&#x7528;&#x7684;&#x4E00;&#x4E9B;&#x79FB;&#x52A8;&#x7AEF;&#x5F00;&#x53D1;&#x7684;&#x5C0F;tips&#xFF0C;&#x4EE5;&#x5907;&#x4E0D;&#x65F6;&#x4E4B;&#x9700;&#x4EE5;&#x53CA;&#x67E5;&#x8BE2;&#x6240;&#x7528;&#x3002;&#x6301;&#x7EED;&#x66F4;&#x65B0;~~~</p>
-<hr>
-<h3 id="meta&#x76F8;&#x5173;"><a href="#meta&#x76F8;&#x5173;" class="headerlink" title="meta&#x76F8;&#x5173;"></a>meta&#x76F8;&#x5173;</h3><p><strong>1. &#x6DFB;&#x52A0;&#x5230;&#x4E3B;&#x5C4F;&#x540E;&#x7684;&#x6807;&#x9898;&#xFF08;IOS&#xFF09;</strong><br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&lt;meta name=<span class="string">&quot;apple-mobile-web-app-title&quot;</span> content=<span class="string">&quot;&#x6807;&#x9898;&quot;</span>&gt;</div></pre></td></tr></table></figure></p>
-        <a class="article-more-a"  href="2016/12/13/移动端web开发tips/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/移动端开发/">移动端开发</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
-  
-    <article id="post-安" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="2016/12/11/安/">安</a>
-    </h1>
-  
-
-        <a href="2016/12/11/安/" class="archive-article-date">
-  	<time datetime="2016-12-11T07:05:03.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2016-12-11</time>
-</a>
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>&#x5929;&#x6C14;&#x5FAE;&#x51C9;&#xFF0C;&#x96FE;&#x973E;&#x5F88;&#x91CD;<br>&#x53D1;&#x4E86;&#x597D;&#x534A;&#x5929;&#x7684;&#x5446;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x60F3;&#x505A;&#x4EC0;&#x4E48;&#xFF0C;&#x4E0D;&#x77E5;&#x9053;&#x5728;&#x60F3;&#x4EC0;&#x4E48;</p>
-        <a class="article-more-a"  href="2016/12/11/安/#more">more >></a>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags"></i>
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="tags/随笔/">随笔</a></li></ul>
-	</div>
-
-      
-
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-
-
-
-
-
-
-
+<nav id="article-nav">
   
   
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="page/2/">2</a><a class="extend next" rel="next" href="page/2/">Next &raquo;</a>
-    </nav>
+    <a href="../../06/ES6学习笔记/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">ES6学习笔记</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
+</nav>
+
+
+
+
+
+
+
 
 
       </div>
@@ -726,8 +291,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		animate: true,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
@@ -737,7 +302,7 @@
 	}
 </script>
 
-<script src="./main.js"></script>
+<script src="../../../.././main.js"></script>
 
 
     
@@ -763,7 +328,7 @@
     
     	<section class="tools-section tools-section-tag">
     			<div class="widget tagcloud" id="js-tagcloud">
-    				<a href="tags/ES6/" style="font-size: 10px;">ES6</a> <a href="tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="tags/css/" style="font-size: 10px;">css</a> <a href="tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="tags/js/" style="font-size: 20px;">js</a> <a href="tags/tips/" style="font-size: 10px;">tips</a> <a href="tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="tags/web/" style="font-size: 10px;">web</a> <a href="tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="tags/模块化编程/" style="font-size: 10px;">模块化编程</a> <a href="tags/移动端开发/" style="font-size: 10px;">移动端开发</a> <a href="tags/转载/" style="font-size: 10px;">转载</a> <a href="tags/随笔/" style="font-size: 15px;">随笔</a> <a href="tags/面试/" style="font-size: 10px;">面试</a>
+    				<a href="../../../../tags/ES6/" style="font-size: 10px;">ES6</a> <a href="../../../../tags/RequireJS/" style="font-size: 10px;">RequireJS</a> <a href="../../../../tags/css/" style="font-size: 10px;">css</a> <a href="../../../../tags/hello-world/" style="font-size: 10px;">hello world</a> <a href="../../../../tags/js/" style="font-size: 20px;">js</a> <a href="../../../../tags/tips/" style="font-size: 10px;">tips</a> <a href="../../../../tags/vue-js/" style="font-size: 10px;">vue.js</a> <a href="../../../../tags/web/" style="font-size: 10px;">web</a> <a href="../../../../tags/微信开发/" style="font-size: 10px;">微信开发</a> <a href="../../../../tags/模块化编程/" style="font-size: 10px;">模块化编程</a> <a href="../../../../tags/移动端开发/" style="font-size: 10px;">移动端开发</a> <a href="../../../../tags/转载/" style="font-size: 10px;">转载</a> <a href="../../../../tags/随笔/" style="font-size: 15px;">随笔</a> <a href="../../../../tags/面试/" style="font-size: 10px;">面试</a>
     			</div>
     	</section>
     
